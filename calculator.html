@@ -1,0 +1,106 @@
+
+<html>
+
+<head>
+    <title>Calculator</title>
+
+    <link rel="stylesheet" type="text/css" href="css.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<body onload="load()">
+    <form id="tab">
+        <table>
+            <tr>
+                <td colspan="4"><input type="number" class="screen" id="screen1" value=0 onclick="" readonly></td>
+            </tr>
+            <tr>
+            
+            		<td><input type="button" style="background-color: green;" class="buttonCon" id="c1" value="" onclick="changeColor(this)"></td>
+            		<td><input type="button"  style="background-color: red;" class="buttonCon" id="c2" value="" onclick="changeColor(this)"></td>
+            		<td><input type="button" style="background-color: blue;" class="buttonCon" id="c3" value="" onclick="changeColor(this)"></td>
+            		<td><input type="button" style="background-color: white;" class="buttonCon" id="c3" value="" onclick="changeColor(this)"></td>
+            	
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="buttonCon" id="butClear" value="W" onclick="memoryClear()">
+                </td>
+                <td>
+                    <input type="button" class="buttonCon" id="butMemory" id="memoryBut" value="M" onclick="memoryUpdate()">
+                </td>
+                <td>
+                    <input type="button" class="buttonCon" id="butClear" value="C" onclick="clear1()">
+                </td>
+                <td>
+                    <input type="button" class="buttonSym" id="butAdd" value="+" onclick="calculationType('add')">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="buttonNum" id="but7" value="7" onclick="screenUpdate(7)">
+                </td>
+                <td>
+                    <input type="button" class="buttonNum" id="but8" value="8" onclick="screenUpdate(8)">
+                </td>
+                <td>
+                    <input type="button" class="buttonNum" id="but9" value="9" onclick="screenUpdate(9)">
+                </td>
+                <td>
+                    <input type="button" class="buttonSym" id="butMinus" value="-" onclick="calculationType('minus')">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="buttonNum" id="but4" value="4" onclick="screenUpdate(4)">
+                </td>
+                <td>
+                    <input type="button" class="buttonNum" id="but5" value="5" onclick="screenUpdate(5)">
+                </td>
+                <td>
+                    <input type="button" class="buttonNum" id="but6" value="6" onclick="screenUpdate(6)">
+                </td>
+                <td>
+                    <input type="button" class="buttonSym" id="butTimes" value="*" onclick="calculationType('times')">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" class="buttonNum" id="but1" value="1" onclick="screenUpdate(1)">
+                </td>
+                <td>
+                    <input type="button" class="buttonNum" id="but2" value="2" onclick="screenUpdate(2)">
+                </td>
+                <td>
+                    <input type="button" class="buttonNum" id="but3" value="3" onclick="screenUpdate(3)">
+                </td>
+                <td>
+                    <input type="button" class="buttonSym" id="butDivide" value="/" onclick="calculationType('divide')">
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" id="butPoint" class="buttonCon" value="." onclick="decimalPointC()">
+                </td>
+                <td>
+                    <input type="button" id="but0" class="buttonNum" value="0" onclick="screenUpdate(0)">
+                </td>
+                <td colspan="2">
+                    <input type="button" id="butEquals" class="button" value="=" onclick="solve()">
+                </td>
+
+            </tr>
+        </table>
+    </form>
+
+</body>
+<footer>
+	<script src="javascript.js"></script>
+</footer>
+</html>
